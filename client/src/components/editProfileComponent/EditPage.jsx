@@ -17,8 +17,8 @@ const EditPage = () => {
     <>
       <Navbar />
       <Box
-        width="100%"
-        height="100%"
+        width="100vw"
+        height="90vh"
         display="flex"
         flexDir="row"
         justifyContent="space-around"
@@ -113,6 +113,7 @@ const EditPage = () => {
         <Box
           width={["70%", "70%", "70%", "30%", "30%", "30%"]}
           display={isProfileOpen ? "flex" : "none"}
+          flexDir="column"
           justifyContent="center"
           alignItems="center"
           height="100%"

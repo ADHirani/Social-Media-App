@@ -42,7 +42,7 @@ const ChatContainer = () => {
     <>
       <Box
         display="flex"
-        flexDir="column"
+        flexDir={[, , , , , ""]}
         width="100vw"
         margin="auto"
         height="90vh"
@@ -177,6 +177,7 @@ const ChatContainer = () => {
             justifyContent="center"
             alignItems="center"
             transition="250ms"
+            height="100%"
           >
             <Profile showUser={displayedUser} />
           </Box>

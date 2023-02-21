@@ -28,13 +28,15 @@ const PostContainer = ({ image, description, post, user }) => {
   );
 
   useEffect(() => {
-    const data = {
-      id: post.createdBy,
-      token: user.token,
-    };
-    dispatch(findUserByIdAsync(data)).then((postUser) => {
-      setPostUser(postUser);
-    });
+    if (isUserAuthenticated) {
+      const data = {
+        id: post.createdBy,
+        token: user.token,
+      };
+      dispatch(findUserByIdAsync(data)).then((postUser) => {
+        setPostUser(postUser);
+      });
+    }
   }, []);
 
   const userProfileHandler = () => {
